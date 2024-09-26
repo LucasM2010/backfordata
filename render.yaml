@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: spring-boot-postgresql-app
+    env: docker
+    region: oregon
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://aws-0-us-west-1.pooler.supabase.com:6543/postgres
+      - key: SPRING_DATASOURCE_USERNAME
+        value: postgres.dscrrhmgapjbergbjddf
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: TxYLNqNRqQQU1JuS

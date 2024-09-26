@@ -1,0 +1,17 @@
+
+FROM openjdk:17-jdk-slim
+
+
+ENV SPRING_PROFILES_ACTIVE=prod
+
+
+WORKDIR /app
+
+
+COPY target/demo-0.0.1-SNAPSHOT.jar /app/demo.jar
+
+
+EXPOSE 8080
+
+
+ENTRYPOINT ["java", "-jar", "/app/demo.jar"]
